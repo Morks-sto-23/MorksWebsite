@@ -1,18 +1,15 @@
-/* General Container */
 .container {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   color: #fff;
 }
 
-
 .hero-about {
   text-align: center;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  padding: 60px 20px;
-  margin-bottom: 60px;
+  padding: 40px 10px;
+  margin-bottom: 40px;
 }
 
 .about-me-grid {
@@ -22,28 +19,29 @@
 }
 
 .about-me-text {
-  max-width: 700px;
-  font-size: 1.2rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.6;
   color: #fffdfd;
+  padding: 0 10px;
 }
 
 .profile-image-large {
-  width: 500px;
-  height: 500px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 10%;
   border: 3px solid #000;
   display: block;
   margin: 0 auto 1rem auto;
 }
+
 .image-and-button {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
 }
-/* CV Button */
+
 .cv-button {
   background-color: #ff0000;
   border-radius: 20px;
@@ -52,6 +50,8 @@
   font-weight: bold;
   border: none;
   font-size: 1rem;
+  width: 90%;
+  max-width: 300px;
   margin-top: 10px;
 }
 
@@ -63,7 +63,7 @@
 .skills h3,
 .timeline h3,
 .fun-facts h3 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   margin-bottom: 20px;
   color: black;
   text-align: center;
@@ -87,33 +87,52 @@
 }
 
 .timeline-item h4 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: black;
 }
 
 .timeline-item p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #f8f4f4;
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-  .profile-image {
-    width: 200px;
-    height: 200px;
-  }
-
-  .cv-button {
-    width: 90%;
-    max-width: 300px;
-  }
-
-  .about-me-text {
-    padding: 0 10px;
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 1200px;
   }
 
   .hero-about {
-    padding: 40px 10px;
+    padding: 60px 20px;
+    margin-bottom: 60px;
+  }
+
+  .about-me-text {
+    max-width: 700px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+
+  .profile-image-large {
+    width: 500px;
+    height: 500px;
+  }
+
+  .cv-button {
+    width: auto;
+  }
+
+  .timeline-item h4 {
+    font-size: 1.8rem;
+  }
+
+  .timeline-item p {
+    font-size: 1.2rem;
+  }
+
+  .skills h3,
+  .timeline h3,
+  .fun-facts h3 {
+    font-size: 2.5rem;
   }
 }
