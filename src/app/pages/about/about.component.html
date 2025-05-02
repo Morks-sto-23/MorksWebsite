@@ -1,0 +1,33 @@
+<div class="container">
+  <!-- Hero + About Me Section Combined -->
+  <section class="hero-about">
+    <div class="about-me-grid">
+      <div class="about-me-text">
+        <h1>{{ name }}</h1>
+        <h2>{{ title }}</h2>
+        <div class="image-and-button">
+          <img src="assets/images/Selfi.jpg" alt="Profile Picture" class="profile-image-large">
+          <button nz-button nzType="primary" class="cv-button" (click)="downloadCV()">Download CV here</button>
+        </div>
+        <p>{{ bio }}</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Skills Section -->
+  <section class="skills">
+    <h3>Skills & Technologies</h3>
+    <app-projects></app-projects>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="timeline">
+    <h3>Timeline & Experience</h3>
+    <div *ngFor="let exp of experiences" class="timeline-item">
+      <h4>{{ exp.year }}</h4>
+      <p><strong>{{ exp.role }}</strong> at {{ exp.company }}</p>
+      <p>{{ exp.about }}</p>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,16 @@
+<div class="home-container">
+  <h1>Services</h1>
+  <div class="projects-grid">
+    <nz-card
+      *ngFor="let project of projects; let i = index"
+      (click)="toggleDescription(i)"
+      class="project-card"
+    >
+      <div class="card-content">
+        <img [src]="project.imageUrl" alt="Project Image" />
+        <h3>{{ project.title }}</h3>
+        <p *ngIf="expandedIndex === i" class="description">{{ project.description }}</p>
+      </div>
+    </nz-card>
+  </div>
+</div>

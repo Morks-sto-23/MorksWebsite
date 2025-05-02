@@ -1,0 +1,13 @@
+<div class="projects-container">
+
+    <!-- Technologies Used Section -->
+    <div class="tech-stack-section">
+      <h2>Technologies I have experience with</h2>
+      <div class="tech-stack">
+        <div class="tech-item" *ngFor="let tech of techStack">
+          <img [src]="tech.image" alt="{{ tech.name }}" class="tech-logo" />          
+        </div>
+      </div>
+    </div>
+  </div>
+  

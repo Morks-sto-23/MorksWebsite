@@ -1,0 +1,73 @@
+.contact-container {
+  width: 100%;
+  max-width: 800px; /* Increased max-width for a larger container */
+  margin: 200px auto 0 auto; /* Keep the top margin as is */
+  padding: 30px; /* Increased padding for more space inside */
+  background-color: rgba(249, 249, 249, 0.7); /* Semi-transparent background */
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+  backdrop-filter: blur(10px); /* Optional: adds blur effect behind the container */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px; /* Increased margin-bottom */
+  font-size: 28px; /* Increased font-size */
+  color: #333;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px; /* Increased margin-bottom */
+}
+
+label {
+  font-size: 16px; /* Increased label font size */
+  color: #333;
+  margin-bottom: 10px; /* Increased margin-bottom */
+}
+
+input, textarea {
+  width: 100%;
+  padding: 14px; /* Increased padding */
+  font-size: 16px; /* Increased font-size */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 12px; /* Increased margin-bottom */
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background for input fields */
+}
+
+textarea {
+  resize: vertical;
+}
+
+.error-message {
+  font-size: 14px; /* Increased error message font size */
+  color: red;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 16px; /* Increased padding */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px; /* Increased font-size */
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+
+  &:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+}
