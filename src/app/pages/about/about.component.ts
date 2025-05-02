@@ -46,10 +46,11 @@ export class AboutComponent {
     return item;
   }
   downloadCV(): void {
+    const fileUrl = 'assets/documents/LiamCV202.pdf';  
     const link = document.createElement('a');
-    link.href = this.resumeUrl;
-    link.download = 'Liam_Morkel_CV.pdf'; 
-    link.click();
+    link.href = fileUrl;  
+    link.download = 'LiamCV202.pdf';  
+    link.click(); 
   }
 }
 
