@@ -26,10 +26,54 @@ export class AboutComponent {
 
   // Timeline section data (optional)
   experiences: { year: string, role: string, company: string , about : string}[] = [
-    { year: '2025', role: 'Full Stack Developer', company: 'Morkel and son Solutions', about: 'Being a developer with a JavaScript background and strong analytical skills involves more than just writing code — it requires problem-solving, adaptability, and effective communication. You need to understand how to build dynamic, responsive front ends using frameworks like Angular or React, while also being comfortable working with APIs and consuming data efficiently.On the backend, familiarity with .NET Core enables you to create robust, scalable services that power modern applications. Knowing how to structure API calls, handle responses, and debug issues between the front and backend is essential. Strong analytical thinking helps you break down complex problems, optimize performance, and deliver user-centric solutions with clarity and precision' },
-    { year: '2024', role: 'Junior Developer', company: 'Morkel and son Solutions',about: 'Being a Junior Cloud Developer means stepping into a dynamic and fast-evolving space where youre responsible for building, deploying, and maintaining applications on cloud platforms like AWS, Azure, or Google Cloud.'},
-    { year: '2023', role: 'Network Manager', company: 'Morkel and son Solutions' ,about: ''},
-    { year: '2022', role: 'Database Administrator', company: 'Morkel and son Solutions',about: 'Learning databases and cloud computing requires a blend of technical curiosity, structured thinking, and a willingness to adapt to evolving technologies. At its core, working with databases means understanding how data is stored, retrieved, and managed — from writing efficient SQL queries to designing normalized schemas and optimizing performance for scalability.Cloud computing introduces a shift in mindset — moving from traditional infrastructure to on-demand, scalable services. It involves learning how to deploy and manage applications using platforms like Azure or AWS, setting up databases, storage, networking, and monitoring — all within a virtual environment. Security, cost optimization, and high availability become key considerations.Together, databases and cloud computing form the backbone of modern software systems, and mastering them means thinking beyond code — it’s about architecting reliable, efficient, and secure systems that grow with your application’s needs.' }
+    {
+      year: '2025',
+      role: 'Cloud Developer',
+      company: 'LCM Solutions',
+      about: `As a Cloud Developer with a JavaScript background and strong analytical thinking, my focus extends beyond just coding. I design and build dynamic, responsive frontends using Angular and React, and develop robust backend services with .NET Core. My daily work involves integrating APIs, optimizing data flow, and solving complex challenges with precision. I ensure reliability and scalability in cloud environments like Azure, and my communication and problem-solving skills are key to delivering effective, user-centric applications.`,
+    },
+    {
+      year: '2024',
+      role: 'Full Stack Developer',
+      company: 'LCM Solutions',
+      about: `This year marked my transition into the cloud space. As a Junior Cloud Developer, I was responsible for deploying and maintaining applications on cloud platforms such as AWS and Azure. I gained hands-on experience with cloud-based architecture, containerization (Docker), and continuous integration/deployment (CI/CD) pipelines. My understanding of full-stack technologies matured through real-world projects requiring both frontend and backend coordination.`,
+    },
+    {
+      year: '2023',
+      role: 'Full Stack Developer',
+      company: 'LCM Solutions',
+      about: `In 2023, I advanced my skills as a full stack developer by working on enterprise-level applications. I collaborated with cross-functional teams to deliver solutions using Angular for frontends and .NET Core for APIs and backend services. This year emphasized writing clean, maintainable code, following agile methodologies, and implementing unit/integration testing. I also contributed to database schema design and performance tuning.`,
+    },
+    {
+      year: '2022',
+      role: 'Junior Developer',
+      company: 'LCM Solutions',
+      about: `During this year, I solidified my understanding of MVC architecture using ASP.NET MVC and .NET Core. I worked on projects that used Razor pages for web development and began building RESTful services. It was a crucial period where I learned how to structure web apps, write maintainable C# code, and interact with relational databases using Entity Framework.`,
+    },
+    {
+      year: '2021',
+      role: 'Data Analyst',
+      company: 'LCM Solutions',
+      about: `This year focused on advanced data analysis. I explored complex SQL queries, data joins, and data wrangling techniques. I worked extensively on cleaning and preparing data for reports and dashboards. I also started experimenting with data visualization tools and basic machine learning techniques to generate actionable insights from raw datasets.`,
+    },
+    {
+      year: '2020',
+      role: 'Junior Analyst',
+      company: 'LCM Solutions',
+      about: `I expanded my SQL knowledge and began using R for statistical computing and data visualization. I worked on real-world data projects involving hypothesis testing, regression models, and exploratory data analysis. I also developed web UIs using HTML, CSS, and Bootstrap — a key milestone in bridging my interest between data and web development.`,
+    },
+    {
+      year: '2019',
+      role: 'Database Administrator',
+      company: 'Scotch College',
+      about: `My time at Scotch College was instrumental in shaping my approach to systems and automation. I served as a boarding master, overseeing daily operations in the boarding house. I used and helped maintain a system for role calls, student tracking, and communication. This real-world application of database management and data entry sparked a deeper interest in system development.`,
+    },
+    {
+      year: '2018',
+      role: 'Database Administrator',
+      company: 'LCM Solutions',
+      about: `I graduated from Pretoria Boys High School with a distinction in IT. My final year project involved building a system to automate routine tasks in the school’s boarding house. It captured various inputs using SQL and Delphi to streamline operations — this project laid the groundwork for my passion for building real-world solutions through software.`,
+    },
   ];
 
   // Fun Facts
