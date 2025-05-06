@@ -48,6 +48,7 @@ body {
   height: 100vh;
   margin: 0;
   font-family: 'Arial', sans-serif;
+  overflow-x: hidden;  
 }
 
 // ==========================
@@ -59,6 +60,8 @@ body {
     background-size: cover;  // Ensure the background always covers the screen
     background-position: center center;  // Center the background image for better positioning
     background-attachment: fixed;  // Keeps the background fixed during scroll
+    overflow-x: hidden;  // Prevents horizontal scrolling
+    height: 100vh;  // Ensure the body takes full height on mobile
   }
 }
 

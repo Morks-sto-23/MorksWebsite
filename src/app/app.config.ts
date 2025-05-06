@@ -18,6 +18,9 @@ import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideHttpClient } from '@angular/common/http';
 import { NzNotificationService  } from 'ng-zorro-antd/notification';
+import { NzMessageService } from 'ng-zorro-antd/message';
+
+
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -25,8 +28,7 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(),
     provideNzI18n(en_US),
     provideHttpClient(),
-    provideAnimations(),                 
-    provideAnimations(),      
+    provideAnimations(),                    
 
     importProvidersFrom(
       NzLayoutModule,
@@ -37,7 +39,8 @@ export const appConfig: ApplicationConfig = {
       NzGridModule,
       NzAvatarModule,
       NzCarouselModule,
-      NzNotificationService           
+      NzNotificationService,
+      NzMessageService     
     )
   ]
 };

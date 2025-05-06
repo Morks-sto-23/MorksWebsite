@@ -15,7 +15,6 @@
       <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="error-message">
         Valid email is required.
       </div>
-      <button nz-button nzType="primary" type="button" (click)="createNotification()">Open the notification box</button>
     </div>
 
     <div class="form-group">
@@ -25,6 +24,7 @@
       </div>
     </div>
 
-    <button type="submit" [disabled]="contactForm.invalid" class="submit-btn">Submit</button>
+    <button nz-button nzType="primary" type="submit" [disabled]="contactForm.invalid" class="submit-btn">Submit</button>
+
   </form>
 </div>
