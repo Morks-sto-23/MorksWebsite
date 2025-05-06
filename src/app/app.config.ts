@@ -7,16 +7,17 @@ import { provideNzI18n, en_US }   from 'ng-zorro-antd/i18n';
 import { routes }           from './app.routes';
 
 // Ng Zorro modules you need app-wide:
-import { NzLayoutModule }   from 'ng-zorro-antd/layout';
-import { NzMenuModule }     from 'ng-zorro-antd/menu';
-import { NzIconModule }     from 'ng-zorro-antd/icon';
-import { NzButtonModule }   from 'ng-zorro-antd/button';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
-import { NzGridModule }     from 'ng-zorro-antd/grid';
+import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
-
+import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideHttpClient } from '@angular/common/http';
+import { NzNotificationService  } from 'ng-zorro-antd/notification';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -24,8 +25,9 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(),
     provideNzI18n(en_US),
     provideHttpClient(),
+    provideAnimations(),                 
+    provideAnimations(),      
 
-    // <-- Pull in all these NgModule providers so standalone components can use them:
     importProvidersFrom(
       NzLayoutModule,
       NzMenuModule,
@@ -35,6 +37,7 @@ export const appConfig: ApplicationConfig = {
       NzGridModule,
       NzAvatarModule,
       NzCarouselModule,
+      NzNotificationService           
     )
   ]
 };

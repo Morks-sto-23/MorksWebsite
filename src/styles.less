@@ -2,12 +2,12 @@
 // 1. Color Palette
 // ==========================
 @primary-color: black;        // Green
-@secondary-color: #2196F3;      // Blue
-@accent-color: #FF9800;         // Orange
-@crm-color: #9C27B0;            // Purple
-@background-color: #F4F7FC;     // Light Gray Background
-@card-bg-color: #fff;           // White for card background
-@text-color: #333;              // Dark text for contrast
+@secondary-color: #2196F3;    // Blue
+@accent-color: #FF9800;       // Orange
+@crm-color: #9C27B0;          // Purple
+@background-color: #F4F7FC;   // Light Gray Background
+@card-bg-color: #fff;         // White for card background
+@text-color: #333;            // Dark text for contrast
 @shadow-color: rgba(0, 0, 0, 0.2);  // Subtle shadow for the cards
 
 // ==========================
@@ -50,6 +50,22 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
+// ==========================
+// 4. Mobile Background Adjustments
+// ==========================
+@media (max-width: 767px) {
+  body {
+    background-image: url('assets/images/Kruger.jpg');  // Mobile-friendly background image
+    background-size: cover;  // Ensure the background always covers the screen
+    background-position: center center;  // Center the background image for better positioning
+    background-attachment: fixed;  // Keeps the background fixed during scroll
+  }
+}
+
+
+// ==========================
+// 5. Home Page Layout (Responsive Adjustments)
+// ==========================
 .home-container {
   display: flex;
   justify-content: center;
@@ -68,7 +84,7 @@ h1 {
 }
 
 // ==========================
-// 4. Project Cards Layout
+// 6. Project Cards Layout
 // ==========================
 .projects-grid {
   display: grid;
@@ -113,7 +129,7 @@ h1 {
 }
 
 // ==========================
-// 5. Responsive Design for Cards
+// 7. Responsive Design for Cards
 // ==========================
 @media (max-width: 768px) {
   .projects-grid {
