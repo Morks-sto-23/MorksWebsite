@@ -1,162 +1,30 @@
-// ==========================
-// 1. Color Palette
-// ==========================
-@primary-color: black;        // Green
-@secondary-color: #2196F3;    // Blue
-@accent-color: #FF9800;       // Orange
-@crm-color: #9C27B0;          // Purple
-@background-color: #F4F7FC;   // Light Gray Background
-@card-bg-color: #fff;         // White for card background
-@text-color: #333;            // Dark text for contrast
-@shadow-color: rgba(0, 0, 0, 0.2);  // Subtle shadow for the cards
+@primary-color: #0328cd;
+@primary-button-color: #0901a1;
+@secondary-color: #001a3d;
+@accent-color: #00092d;
+@crm-color: #18cc00;
+@background-color: #F4F7FC;
+@card-bg-color: #fff;
+@text-color: #333;
+@shadow-color: rgba(0, 0, 0, 0.2);
 
-// ==========================
-// 2. Layout Helpers
-// ==========================
 @space-xs: 8px;
 @space-sm: 16px;
 @space-md: 24px;
 @space-lg: 32px;
 @space-xl: 40px;
 
-// Flex Helpers
-.d-flex {
-  display: flex;
-}
-
-.d-flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.d-flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-// ==========================
-// 3. Home Page Layout
-// ==========================
 body {
   background-image: url('assets/images/LionsHead.jpg');
   background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-position: center;
   background-attachment: fixed;
-  height: 100vh;
   margin: 0;
   font-family: 'Arial', sans-serif;
-  overflow-x: hidden;  
-}
-
-// ==========================
-// 4. Mobile Background Adjustments
-// ==========================
-@media (max-width: 767px) {
-  body {
-    background-image: url('assets/images/Kruger.jpg');  // Mobile-friendly background image
-    background-size: cover;  // Ensure the background always covers the screen
-    background-position: center center;  // Center the background image for better positioning
-    background-attachment: fixed;  // Keeps the background fixed during scroll
-    overflow-x: hidden;  // Prevents horizontal scrolling
-    height: 100vh;  // Ensure the body takes full height on mobile
-  }
-}
-
-
-// ==========================
-// 5. Home Page Layout (Responsive Adjustments)
-// ==========================
-.home-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  overflow-x: hidden;
   height: 100vh;
-  padding: @space-sm;
-  background-color: @background-color;
-  text-align: center;
-}
 
-h1 {
-  font-size: 36px;
-  color: @primary-color;
-  margin-bottom: @space-md;
-}
-
-// ==========================
-// 6. Project Cards Layout
-// ==========================
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: @space-md;
-  width: 100%;
-  margin-top: @space-lg;
-}
-
-.project-card {
-  background: @card-bg-color;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px @shadow-color;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  padding: @space-md;
-
-  &:hover {
-    box-shadow: 0 8px 16px @shadow-color;
-  }
-
-  .ant-card-head {
-    background-color: @secondary-color;
-    color: #fff;
-    padding: @space-sm;
-    font-weight: bold;
-    cursor: pointer;  // Make it clear it's clickable
-  }
-
-  .card-content {
-    padding: @space-md;
-  }
-
-  p {
-    color: @text-color;
-    margin-bottom: @space-sm;
-  }
-
-  .description {
-    color: @accent-color;  // Highlight description text with an accent color
-  }
-}
-
-// ==========================
-// 7. Responsive Design for Cards
-// ==========================
-@media (max-width: 768px) {
-  .projects-grid {
-    gap: @space-sm;
-  }
-  .nz-card {
-    width: 90%;  // Smaller width on mobile
-  }
-}
-
-@media (min-width: 768px) {
-  .projects-grid {
-    gap: @space-md;
-  }
-  .nz-card {
-    width: 80%;  // Slightly smaller on tablets and up
-  }
-}
-
-@media (min-width: 1024px) {
-  .projects-grid {
-    gap: @space-lg;
-  }
-  .nz-card {
-    width: 70%;  // Adjust the card width for larger screens
+  @media (max-width: 767px) {
+    background-image: url('assets/images/Kruger.jpg');
   }
 }

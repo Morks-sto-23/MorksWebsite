@@ -1,22 +1,45 @@
 <nz-layout>
   <nz-header class="navbar">
-    <div class="logo"> LCM Solutions </div>
-    <ul nz-menu nzTheme="dark" nzMode="horizontal" class="nav-menu">
-      <!-- Home Link -->
-      <li nz-menu-item routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+    <div class="logo">
+      <a routerLink="/">
+        <img src="assets/images/b.png" alt="LCM Logo" class="logo-img" />
+      </a>
+    </div>
+    <h3 class="logo-text">LCM Solutions</h3>
+
+    <div class="burger" (click)="mobileMenuOpen = !mobileMenuOpen">
+      <ng-container *ngIf="!mobileMenuOpen; else closeTpl">
+        <i nz-icon nzType="bars" nzTheme="outline"></i>
+      </ng-container>
+      <ng-template #closeTpl>
+        <i nz-icon nzType="close" nzTheme="outline"></i>
+      </ng-template>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <ul nz-menu nzTheme="dark" nzMode="horizontal" class="desktop-nav">
+      <li nz-menu-item routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
         Home
       </li>
-      <!-- About Link -->
-      <li nz-menu-item routerLink="/about" routerLinkActive="active">
-        About
-      </li>
-      <!-- Contact Link -->
-      <li nz-menu-item routerLink="/contact" routerLinkActive="active">
-        Contact
-      </li>
-      <li nz-menu-item routerLink="/projects" routerLinkActive="active">
-        Tech Stack
-      </li>
+      <li nz-menu-item routerLink="/about" routerLinkActive="active">About</li>
+      <li nz-menu-item routerLink="/contact" routerLinkActive="active">Contact</li>
+      <li nz-menu-item routerLink="/projects" routerLinkActive="active">Tech Stack</li>
     </ul>
   </nz-header>
+
+  <!-- Mobile Navigation -->
+  <ul *ngIf="mobileMenuOpen" class="mobile-nav">
+    <li [class.active]="isActive('/')">
+      <a routerLink="/" (click)="mobileMenuOpen = false">Home</a>
+    </li>
+    <li [class.active]="isActive('/about')">
+      <a routerLink="/about" (click)="mobileMenuOpen = false">About</a>
+    </li>
+    <li [class.active]="isActive('/contact')">
+      <a routerLink="/contact" (click)="mobileMenuOpen = false">Contact</a>
+    </li>
+    <li [class.active]="isActive('/projects')">
+      <a routerLink="/projects" (click)="mobileMenuOpen = false">Tech Stack</a>
+    </li>
+  </ul>
 </nz-layout>

@@ -7,6 +7,7 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzTagModule } from 'ng-zorro-antd/tag';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import { NzTypographyModule } from 'ng-zorro-antd/typography';
     NzTagModule,
     NzLayoutModule,
     NzTypographyModule,
+    NzIconModule
   ]
 })
 export class SharedModule {}

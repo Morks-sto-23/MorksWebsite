@@ -1,37 +1,99 @@
+/* Navbar Styling */
 .navbar {
-  display: flex;                     /* Use flexbox to align items */
-  justify-content: space-between;     /* Space out the logo and menu items */
-  align-items: center;                /* Vertically center the items */
-  padding: 0 40px;                    /* Add padding to the navbar */
-  background-color: #edf4fa;          /* Background color for the header */
-  height: 80px;                       /* Increase the height of the navbar */
-  position: sticky;                   /* Make the navbar sticky */
-  top: 0;                             /* Stick the navbar to the top */
-  z-index: 1000;                      /* Ensure navbar is on top of other content */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: #001529;
+  position: relative;
+  height: 64px;
 }
 
+/* LOGO SECTION */
 .logo {
-  font-size: 32px;                    /* Increase the font size of the logo */
-  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center; /* Ensures both image and text are aligned horizontally */
+  justify-content: center;
+
+  .logo-img {
+    height: 40px; /* Logo image size */
+    width: auto;
+    margin-right: 10px; /* Space between logo and text */
+    border-radius: 50%;
+  }
+}
+
+/* LOGO TEXT */
+.logo-text {
+  color: white; /* Set text color to white */
+  font-family: 'Roboto', sans-serif; /* Modern font */
+  font-size: 24px; /* Font size */
   font-weight: bold;
+  margin: 0;
+  letter-spacing: 1px; /* Space between letters */
+  line-height: 40px; /* Vertically align with the logo image */
+  text-transform: uppercase; /* Uppercase text */
+  transition: all 0.3s ease; /* Smooth transition */
 }
 
-.nav-menu {
-  display: flex;                      /* Use flexbox to align menu items */
-  gap: 20px;                          /* Add space between the menu items */
-  margin: 0;                           /* Remove default margin */
-  padding: 0;                          /* Remove default padding */
+/* Hover effect for logo text */
+.logo-text:hover {
+  color: #1890ff; /* Change color on hover */
+  transform: scale(1.05); /* Slight scaling effect */
 }
 
-.nav-menu li {
-  list-style-type: none;               /* Remove default list styles */
+/* DESKTOP NAVIGATION */
+.desktop-nav {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
-.nav-menu li a {
-  color: white;                        /* Change text color to white */
-  font-size: 18px;                     /* Adjust font size */
+/* BURGER MENU ICON */
+.burger {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 }
 
-.nav-menu li a:hover {
-  color:  white;                    /* Highlight link color on hover */
+/* MOBILE NAVIGATION */
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  background-color: #001529;
+  padding: 12px;
+  list-style: none;
+  margin: 0;
+
+  li {
+    margin: 8px 0;
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &.active a {
+      font-weight: bold;
+      color: #1890ff;
+    }
+  }
+
+  @media (min-width: 769px) {
+    display: none;
+  }
 }
